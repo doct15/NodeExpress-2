@@ -12,6 +12,9 @@ bmcgehee/NodeExpress-2:
     - echo "Begin PreRelease"
     - echo "ENV_VAR = $ENV_VAR"
     - echo "BUILD_VAR = $BUILD_VAR"
+    - sudo apt-get update
+    - sudo apt-get install nodejs -y
+    - sudo apt-get install npm -y
     - npm install
     - npm test
 
