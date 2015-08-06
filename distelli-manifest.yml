@@ -2,22 +2,35 @@ bmcgehee/NodeExpress-2:
   PkgInclude:
     - '*'
 
+  Env:
+    - ENV_VAR: "Test"
+    
   PkgExclude:
     - node_modules/
 
   PreRelease:
+    - echo "Begin PreRelease"
+    - echo "ENV_VAR = $ENV_VAR"
+    - echo "BUILD_VAR = $BUILD_VAR"
     - npm install
     - npm test
 
   PreInstall:
     - echo "Begin PreInstall"
+    - echo "ENV_VAR = $ENV_VAR"
+    - echo "BUILD_VAR = $BUILD_VAR"
     - sudo apt-get update
     - sudo apt-get install nodejs -y
     - sudo apt-get install npm -y
 
   PostInstall:
     - echo "Begin PostInstall"
+    - echo "ENV_VAR = $ENV_VAR"
+    - echo "BUILD_VAR = $BUILD_VAR"
+    - npm install
 
   Exec:
     - echo "Begin Exec"
+    - echo "ENV_VAR = $ENV_VAR"
+    - echo "BUILD_VAR = $BUILD_VAR"
     - /usr/bin/nodejs app.js
