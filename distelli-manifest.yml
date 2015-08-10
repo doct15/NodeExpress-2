@@ -17,6 +17,7 @@ bmcgehee/NodeExpress-2:
     - sudo apt-get install npm -y
     - sudo npm install
     - npm test
+    - echo "End PreRelease"
 
   PreInstall:
     - echo "Begin PreInstall"
