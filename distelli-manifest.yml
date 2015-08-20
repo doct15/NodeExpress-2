@@ -34,12 +34,9 @@ bmcgehee/NodeExpress-2:
 
   PostInstall:
     - echo "Begin PostInstall"
-    - echo "ENV_VAR = $ENV_VAR"
-    - echo "BUILD_VAR = $BUILD_VAR"
+    - . ~/.nvm/nvm.sh
     - npm install
 
   Exec:
     - echo "Begin Exec"
-    - echo "ENV_VAR = $ENV_VAR"
-    - echo "BUILD_VAR = $BUILD_VAR"
     - node app.js
