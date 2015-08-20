@@ -35,6 +35,7 @@ bmcgehee/NodeExpress-2:
   PostInstall:
     - echo "Begin PostInstall"
     - . ~/.nvm/nvm.sh
+    - nvm use v0.12.7
     - npm install
 
   Exec:
